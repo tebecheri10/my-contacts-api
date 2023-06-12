@@ -11,13 +11,12 @@ connectDb()
 
 const app = express();
 
-app.use(express.json()); // Colocar antes del errorHandler
-
+app.use(express.json()); 
 app.use("/api/contacts", contactRoutes);
 app.use("/api/users", userRoutes);
 
 
-app.use(errorHandler); // Colocar después de las rutas
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 

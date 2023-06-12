@@ -55,7 +55,6 @@ const updateContact = asyncHandler(async (req, res) => {
 });
 
 const deleteContact = asyncHandler(async (req, res) => {
-  console.log("id::::", req.params.id)
   const contact = await Contact.findById(req.params.id)
  
   if(!contact){
